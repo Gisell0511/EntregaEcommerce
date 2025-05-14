@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "MBGrotesk-Medium";
+  src: url("/public/fonts/MBGrotesk-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
