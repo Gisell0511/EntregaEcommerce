@@ -1,5 +1,6 @@
-import TopBar from "./components/molecules/Topbar"
+import TopBar from "./components/molecules/TopBar.jsx"
 import Header from "./components/organisms/Header"
+import MenuNavs from "./components/organisms/MenuNavs"
 
 function App() {
   
@@ -7,6 +8,7 @@ function App() {
     <>
       <TopBar></TopBar>
       <Header></Header>
+      <MenuNavs></MenuNavs>
     </>
   )
 }
