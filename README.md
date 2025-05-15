@@ -5,10 +5,10 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 1. **Clonar el repositorio**  
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
+   git clone [https://github.com/Gisell0511/EntregaEcommerce.git]
 2. Entrar al folder 
     ```bash
-    cd nombre-del-proyecto
+    cd PRUEBA-TECNICA
 
 3. Instalar dependencias
     ```bash
