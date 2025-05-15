@@ -1,40 +1,43 @@
 import ButtonDropdown from "../molecules/ButtonDropdown";
 import React, { useState } from "react";
-//Hola
-function MenuNavs() {
-    const [openIndex, setOpenIndex] = useState(null);
+
+function MenuNavs({ onCategorySelect }) {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const menuItems = [
+    { label: "Electronics", category: "electrónica" },
+    { label: "Gaming & Computers", category: "gaming" },
+    { label: "Fashion", category: "moda" },
+    { label: "Beauty & Personal Care", category: "belleza" },
+    { label: "Home & Kitchen", category: "hogar" },
+    { label: "Groceries", category: "alimentos" },
+    { label: "Sports & Outdoors", category: "deportes" },
+    { label: "Decor & Furniture", category: "decoracion" }
+  ];
   
-    const menuItems = [
-      "Groceries",
-      "Premium Fruits",
-      "Home & Kitchen",
-      "Fashion",
-      "Electronics",
-      "Beauty",
-      "Home Improvements",
-      "Sports, Toys & Luggage"
-    ];
-  
-    return (
-      <div className="hidden md:flex px-4 md:px-16 py-2 gap-3 flex-wrap">
-        {menuItems.map((label, index) => (
-          <ButtonDropdown
-          key={label}
-          label={label}
+
+  return (
+    <div className="hidden md:flex px-4 md:px-16 py-2 gap-3 flex-wrap">
+      {menuItems.map((item, index) => (
+        <ButtonDropdown
+          key={item.label}
+          label={item.label}
           options={[
-            { label: "Account settings", action: () => console.log(`${label} > Account`) },
-            { label: "Support", action: () => console.log(`${label} > Support`) },
-            { label: "License", action: () => console.log(`${label} > License`) },
-            { label: "Sign out", action: () => console.log(`${label} > Sign out`) }
+            {
+              label: `Ver ${item.label}`,
+              action: () => onCategorySelect(item.category),
+            },
+            {
+              label: "Limpiar filtro",
+              action: () => onCategorySelect(null),
+            },
           ]}
           isOpen={openIndex === index}
           onToggle={() => setOpenIndex(openIndex === index ? null : index)}
         />
-        
-        ))}
-      </div>
-    );
-  }
-  
+      ))}
+    </div>
+  );
+}
 
 export default MenuNavs;

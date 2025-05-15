@@ -7,12 +7,10 @@ function TopBar() {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-2 px-4 sm:px-8 py-2 bg-gray-100">
       
-      {/* Texto izquierdo - oculto en mobile */}
       <div className="hidden sm:block">
         <TextGray />
       </div>
 
-      {/* Botones Clickables - siempre visibles */}
       <div className="flex w-full justify-between sm:w-auto sm:gap-3">
         <ClickableLink
           icon={MapPinLine}
