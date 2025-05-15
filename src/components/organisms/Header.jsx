@@ -7,22 +7,37 @@ import ClickableLink from "../atoms/ClickableLink";
 
 function Header() {
   return (
-    <div className="flex items-center justify-between p-4 bg-white shadow-sm">
-      <div className="flex items-center gap-4">
+    <div className="flex flex-col md:flex-row sm:items-center sm:justify-between p-4 gap-4 bg-white shadow-sm">
+
+      {/* Fila superior: menú y logo (también se ve en mobile) */}
+      <div className="flex items-center justify-between sm:justify-start gap-4">
         <ListButtom />
         <TextGeneral texto={"MegaMart"} />
       </div>
 
-      <div className="flex-1 max-w-xl mx-4">
+      {/* Centro: barra de búsqueda */}
+      <div className="w-full sm:max-w-xl sm:mx-4">
         <SearchBar />
       </div>
 
-      <div className="flex items-center gap-6">
-        <ClickableLink icon={User} text={"Sign Up/Sign In"} fontSize="text-md" onClick={() => console.log("Clicked Sing Up")}></ClickableLink>
-        <ClickableLink icon={ShoppingCart} text={"Cart"} fontSize="text-md" onClick={() => console.log("Clicked on cart")}></ClickableLink>
+      {/* Derecha: usuario y carrito */}
+      <div className="flex items-center justify-end gap-4 sm:gap-6">
+        <ClickableLink
+          icon={User}
+          text={"Sign Up/Sign In"}
+          fontSize="text-sm"
+          onClick={() => console.log("Clicked Sign Up")}
+        />
+        <ClickableLink
+          icon={ShoppingCart}
+          text={"Cart"}
+          fontSize="text-sm"
+          onClick={() => console.log("Clicked on cart")}
+        />
       </div>
     </div>
   );
 }
+
 
 export default Header;
