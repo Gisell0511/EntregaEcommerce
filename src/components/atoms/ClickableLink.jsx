@@ -6,10 +6,13 @@ function ClickableLink({ icon: Icon, text, highlight, onClick, iconSize = 20, fo
       onClick={onClick} 
       className={`flex items-center gap-1 text-gray-700 hover:text-cyan-600 transition-colors font-medium ${fontSize}`}
     >
-      <Icon size={iconSize} weight="light" /> 
-      <span className="hidden sm:inline">{text} <strong>{highlight}</strong></span>
+      <Icon size={iconSize} weight="light" />
+      <span>
+        {text} {highlight && <strong>{highlight}</strong>}
+      </span>
     </button>
   );
 }
 
 export default ClickableLink;
+
