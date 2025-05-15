@@ -7,12 +7,12 @@ Sigue estos pasos para ejecutar el proyecto localmente:
    ```bash
    git clone [URL_DEL_REPOSITORIO]
 2. Entrar al folder 
-```bash
+    ```bash
     cd nombre-del-proyecto
 
 3. Instalar dependencias
-```bash
+    ```bash
     npm install
 4. Iniciar el servidor
-```bash
+    ```bash
     npm run dev
