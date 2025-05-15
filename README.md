@@ -13,6 +13,8 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 3. Instalar dependencias
     ```bash
     npm install
+    npm install swiper 
+
 4. Iniciar el servidor
     ```bash
     npm run dev
